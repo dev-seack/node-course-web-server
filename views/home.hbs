@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Some Website</title>
+</head>
+
+<body>
+    {{> header}}
+
+    <!-- Helperfunction! ScreamIt is the function and welcomeMessage the parameter which is in this case the text which will be converted into uppercase text -->
+    <h4>{{screamIt welcomeMessage}}</h4>
+
+    <p>My name is {{name}}</p>
+
+    {{> footer}}
+</body>
+
+</html>
