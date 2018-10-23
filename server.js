@@ -67,7 +67,7 @@ app.get("/bad", (req, res) => {
     errorMessage: "This site does not exist"
   });
 });
-//listen to port 3000 (localhost)
+//listen to port 3000 (localhost) or heroku if available
 app.listen(port, () => {
   console.log("Server is up on port " + port);
 });
