@@ -15,7 +15,6 @@ hbs.registerHelper("screamIt", (text) => {
   return text.toUpperCase();
 });
 
-//middleway function. next() is essential in order to continue the code and execute the next middleway
 app.use((req, res, next) => {
   var now = new Date().toString();
   var log = `${now}: ${req.method} ${req.url}`;
@@ -26,6 +25,7 @@ app.use((req, res, next) => {
     if (err) console.log("Unable to append to server.log");
   });
 
+  //middleway function. next() is essential in order to continue the code and execute the next middleway
   next();
 });
 
@@ -39,7 +39,7 @@ app.use(express.static(__dirname + "/_public")); //__dirname is the projects dir
 // });
 
 //REQ (Request): information about the request
-//RES (Response): anything i am gonna to return
+//RES (Response): anything i am going to return
 app.get("/", (req, res) => {
   //res.send("<h1>Hello Express</h1>");
   res.render("home.hbs", {
